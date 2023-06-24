@@ -1,0 +1,25 @@
+<main id="catalog">
+    <section class="game-market">
+        <h1>Game Trade Code</h1>
+
+        {{#if games}}
+        <div class="offer-list">
+            {{#each games}}
+                {{> gamePreview}}
+            {{/each}}
+        </div>
+        {{else}}
+        <div class="no-offer">
+            <p>There are no game offers found!</p>
+        </div>
+        {{/if}}
+
+        
+         <form class="search float-right">
+            <label>Search: </label>
+            <input type="text" name="search" value="{{search}}">
+            <input type="submit" class="btn btn-primary" value="Search">
+        </form>
+
+    </section>
+</main>
